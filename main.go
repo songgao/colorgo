@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"os/exec"
 	"sync"
@@ -19,7 +20,7 @@ func start(cmd *exec.Cmd, stdout chan<- string, stderr chan<- string) {
 		var err error
 		for err == nil {
 			line, err = in.ReadString('\n')
-			if err == nil {
+			if err == nil || err == io.EOF {
 				ch <- line
 			}
 		}
