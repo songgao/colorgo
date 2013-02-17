@@ -19,7 +19,7 @@ func main() {
 		for i, v := range os.Args[1:] {
 			args[i] = v
 		}
-		p = pipeline.StartPipelineWithCommand("go", args...).ChainLineProcessor(colorizers[os.Args[1]], nil)
+		p = pipeline.StartPipelineWithCommand("go", args...).ChainLineProcessor(colorizers[os.Args[1]], colorizers[os.Args[1]])
 	}
 	p.PrintAll()
 }
