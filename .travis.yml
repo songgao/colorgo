@@ -1,2 +1,4 @@
 lanaguage: go
 script: go build
+install:
+    - go get github.com/songgao/go.pipeline
