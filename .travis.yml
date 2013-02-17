@@ -1,0 +1,2 @@
+lanaguage: go
+script: go build
