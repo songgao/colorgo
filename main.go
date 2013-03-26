@@ -22,4 +22,8 @@ func main() {
 		p = pipeline.StartPipelineWithCommand("go", args...).ChainLineProcessor(colorizers[os.Args[1]], colorizers[os.Args[1]])
 	}
 	p.PrintAll()
+	errs := p.Errors()
+	if len(errs) > 0 {
+		os.Exit(1)
+	}
 }
