@@ -6,7 +6,9 @@ import (
 )
 
 var colorizers = map[string]pipeline.LineProcessor{
-	"build": build,
+	"build":   build,
+	"install": build,
+	"run":     build,
 }
 
 func main() {
