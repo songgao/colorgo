@@ -1,12 +1,14 @@
 package main
 
 import (
-	"github.com/songgao/go.pipeline"
 	"os"
+
+	"github.com/songgao/go.pipeline"
 )
 
 var colorizers = map[string]pipeline.LineProcessor{
-	"build": build,
+	"build": buildOrTest,
+	"test":  buildOrTest,
 }
 
 func main() {
