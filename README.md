@@ -1,5 +1,5 @@
 # colorgo
-`colorgo` is a wrapper to `go` command that colorizes output from `go build`.
+`colorgo` is a wrapper to `go` command that colorizes output from `go build` and `go test`.
 ![screenshot 1](http://songgao.github.com/colorgo/images/screenshot1.png)
 
 # Installation
