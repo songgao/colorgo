@@ -1,4 +1,5 @@
 language: go
 script: go build
+sudo: false
 install:
     - go get github.com/songgao/go.pipeline
